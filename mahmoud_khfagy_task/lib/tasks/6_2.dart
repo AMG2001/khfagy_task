@@ -40,7 +40,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text("BottomNavigationBar"),
+        title: const Text("BottomNavigationBar"),
       ),
       body: pagesOfBottomNavBar.elementAt(activeIndex),
       bottomNavigationBar: BottomNavigationBar(
@@ -124,7 +124,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Text(
           "0 -> Home",
@@ -140,7 +140,7 @@ class BusniessScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Text(
           "1 -> Busniess",
@@ -156,7 +156,7 @@ class School extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Text(
           "2 -> School",
@@ -172,7 +172,7 @@ class Settings extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Text(
           "3 -> Settings",
