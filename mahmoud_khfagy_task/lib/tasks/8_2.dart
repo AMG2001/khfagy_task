@@ -23,32 +23,39 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool checkBoxBool = false;
+  bool switchBool = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Drawer Demo"),
+        centerTitle: true,
+        title: Text("Accessibility test"),
       ),
-      drawer: Drawer(
-        semanticLabel: "Welcome to Drawer",
+      body: SafeArea(
         child: Column(
           children: [
-            SizedBox(
-              height: 36,
-            ),
-            Container(
-              height: 100,
-              child: Text(
-                "Welcome to Drawer",
-                style: TextStyle(color: Colors.green, fontSize: 24),
+            ListTile(
+              title: Text("Switch"),
+              trailing: Switch(
+                value: switchBool,
+                onChanged: (value) {
+                  setState(() {
+                    switchBool = value;
+                  });
+                },
               ),
             ),
-            Divider(),
             ListTile(
-              title: Text("Item 1"),
-            ),
-            ListTile(
-              title: Text("Item 2"),
+              title: Text("Check box"),
+              trailing: Checkbox(
+                value: checkBoxBool,
+                onChanged: (value) {
+                  setState(() {
+                    checkBoxBool = value!;
+                  });
+                },
+              ),
             )
           ],
         ),
