@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 void main() {
   runApp(TasksApp());
@@ -28,16 +27,13 @@ class LoginPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Login Page"),
       ),
-      body:
-          // width: Get.width,
-          // height: Get.height,
-          SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Form(
           key: _formKey,
           child: Column(
             children: [
               const SizedBox(
-                height: 180,
+                height: 160,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -135,7 +131,7 @@ class LoginPage extends StatelessWidget {
                     if (_formKey.currentState!.validate()) {}
                   },
                   child: const Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 45),
+                    padding: EdgeInsets.symmetric(horizontal: 45),
                     child: Text(
                       "Login",
                       style: TextStyle(fontSize: 18),
@@ -144,7 +140,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 210,
+                height: 200,
               ),
 
               /**
